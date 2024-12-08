@@ -36,14 +36,3 @@ Before running this project, ensure you have the following installed:
 4. **Minikube** and **kubectl** (for Kubernetes deployment, optional)
 
 ---
-
-## Getting Started
-
-### 1. Clone the Repository
-
-Clone the repository and navigate to the project folder:
-
-```bash
-git clone <repository-url>
-cd <repository-folder>
-
