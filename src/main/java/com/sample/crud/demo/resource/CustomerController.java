@@ -25,7 +25,7 @@ public class CustomerController {
     	 return customerRepository.findById(id).orElseThrow(() -> new RuntimeException("Customer not found"));
     }
 
-    @PostMapping("/customers")
+    @PostMapping("/customer")
     public Customer createCustomer(@RequestBody Customer customer) {
     	return customerRepository.save(customer);
     }
@@ -41,7 +41,7 @@ public class CustomerController {
         return customerRepository.save(existingCustomer);
     }
 
-    @DeleteMapping("/customers/{id}")
+    @DeleteMapping("/customer/{id}")
     public void deleteCustomer(@PathVariable Long id) {
     	customerRepository.deleteById(id);
     }
