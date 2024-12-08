@@ -1,6 +1,6 @@
 # Spring Boot REST CRUD API
 
-This project is a **Spring Boot** application providing a **RESTful API** for managing resources (e.g., employees). It supports basic CRUD operations: Create, Read, Update, and Delete.
+This project is a **Spring Boot** application providing a **RESTful API** for managing resources (e.g., customers). It supports basic CRUD operations: Create, Read, Update, and Delete.
 
 ---
 
