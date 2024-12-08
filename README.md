@@ -48,8 +48,8 @@ Before running this project, ensure you have the following installed:
 ## How to Use
 1. Clone the repository:
    ```bash
-   git clone 
-   cd markproject-Springboot
+   git clone <repository>
+   cd <repository>
    ```
 2. Build the Project
    ```bash
