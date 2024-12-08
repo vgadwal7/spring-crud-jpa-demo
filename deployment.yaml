@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name:  spring-crud-demo
+  name:  spring-rest-crud-api
   labels:
-    app:  spring-crud-demo
+    app:  spring-rest-crud-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app:  spring-crud-demo
+      app:  spring-rest-crud-api
   template:
     metadata:
       labels:
-        app:  spring-crud-demo
+        app:  spring-rest-crud-api
     spec:
       containers:
-      - name: spring-crud-demo
-        image:  spring-crud-demo:latest
+      - name: spring-rest-crud-api
+        image:  spring-rest-crud-api:latest
         ports:
         - containerPort: 8080
