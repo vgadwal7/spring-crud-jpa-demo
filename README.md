@@ -36,3 +36,47 @@ Before running this project, ensure you have the following installed:
 4. **Minikube** and **kubectl** (for Kubernetes deployment, optional)
 
 ---
+## APIs
+
+### Endpoints
+- `POST api/customer`: Add a new customer.
+- `POST /api/customers`: Retrieve all customers.
+- `GET /customer/{id}`: Retrieve a specific customer by ID.
+- `PUT /customer/{id}`: Update a specific customer.
+- `DELETE /customer/{id}`: Delete a specific customer by ID.
+
+## How to Use
+1. Clone the repository:
+   ```bash
+   git clone 
+   cd markproject-Springboot
+   ```
+2. Build the Project
+   ```bash
+   mvn clean package
+   ```
+3. Run the Application:
+   - java -jar target/<your-app>.jar
+  
+4. Build the Docker Image:
+   - docker build -t spring-rest-crud-api:latest .
+  
+5. Run the Docker Container
+   - docker run -p 8080:8080 spring-rest-crud-api:latest
+  
+6. Start Minikube
+   - minikube start
+  
+7. Build the Docker Image in Minikube's Docker Environment
+   - eval $(minikube docker-env)
+     docker build -t spring-rest-crud-api:latest .
+  
+8. Apply Kubernetes Configurations
+   - kubectl apply -f deployment.yaml
+   - kubectl apply -f service.yaml
+  
+9. Access the Application
+   - minikube service spring-rest-crud-api --url
+  
+10. Run the Docker Container
+   - docker run -p 8080:8080 spring-rest-crud-api:latest
