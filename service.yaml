@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name:  spring-crud-demo
+  name:  spring-rest-crud-api
 spec:
   selector:
-    app:  spring-crud-demo
+    app:  spring-rest-crud-api
   ports:
     - protocol: TCP
       port: 80
