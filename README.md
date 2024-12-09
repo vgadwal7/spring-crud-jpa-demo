@@ -40,10 +40,8 @@ Before running this project, ensure you have the following installed:
 
 ### Endpoints
 - `POST api/customer`: Add a new customer.
-- `POST /api/customers`: Retrieve all customers.
-- `GET /customer/{id}`: Retrieve a specific customer by ID.
-  ```bash
-           curl -XPOST -H "Content-type: application/json" -d '{
+    ```bash
+     curl -XPOST -H "Content-type: application/json" -d '{
          	id: long
          	firstName: "John",
          	middleName: "Henry",
@@ -51,9 +49,30 @@ Before running this project, ensure you have the following installed:
          	emailAddress: "johDoe@email.com",
          	phoneNumber: "27550555474" 
       }' '<minikube-serviceurl>/api/customer'
+    '''
+- `POST /api/customers`: Retrieve all customers.
+   ```bash
+     curl -XPOST -H "Content-type: application/json" '<minikube-service:url>/api/customers'
+    '''
+- `GET /customer/{id}`: Retrieve a specific customer by ID.
+  ```bash         
+     curl -XGET -H "Content-type: application/json" '<minikube-service:url>/api/customer/{id}'
  '''
 - `PUT /customer/{id}`: Update a specific customer.
+  ```bash
+   curl -XPUT -H "Content-type: application/json" -d '{
+         	id: long
+         	firstName: "John",
+         	middleName: "Henry",
+         	lastName: "Doe",
+         	emailAddress: "johDoe@email.com",
+         	phoneNumber: "27550555474" 
+      }' '<minikube-service:url>/api/customer/{id}'
+  '''
 - `DELETE /customer/{id}`: Delete a specific customer by ID.
+  ```bash
+  curl -XDELETE -H "Content-type: application/json" '<minikube-service:url>/api/customer/{id}'
+  '''
 
 ## How to Use
 1. Clone the repository:
