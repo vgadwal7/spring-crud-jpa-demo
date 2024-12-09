@@ -78,5 +78,19 @@ Before running this project, ensure you have the following installed:
 9. Access the Application
    - minikube service spring-rest-crud-api --url
   
-10. Run the Docker Container
-   - docker run -p 8080:8080 spring-rest-crud-api:latest
+10. Capture the service url and suffix the api's on postman to see the results.
+
+11. Log on to H2 ui using the service url from 9 suffixed with http://<minikube-service-url>/h2-ui/ to see the results in db.
+     
+## CI/CD using github actions 
+  
+11. Add GitHub Actions secrets   
+   - DOCKERHUB_USERNAME	The username of the Docker Hub user
+   -  DOCKERHUB_TOKEN	The personal token of the Docker Hub user. I show how to generate it in this post
+   - SERVER_HOST	The IP address of the server where your application is running on Docker
+   - SERVER_PORT	The server SSH port. It is port 22 by default
+   - SERVER_USER	The user to connect to the server with
+   - SERVER_KEY	The private SSH key of the server
+
+Create a commit of the changes, push the changes to the remote repository, and go to the GitHub repository to create a pull request.Once the pull request is created, scroll to the bottom, and you will see a running GitHub Action having the name "Spring JPA Demo application workflow".If you click on the link labeled as "Details", on the page displayed, you click on the menu "Summary" located at the top left, you will see the following schema of your GitHub Actions workflow
+     
