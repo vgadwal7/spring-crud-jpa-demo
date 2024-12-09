@@ -42,6 +42,16 @@ Before running this project, ensure you have the following installed:
 - `POST api/customer`: Add a new customer.
 - `POST /api/customers`: Retrieve all customers.
 - `GET /customer/{id}`: Retrieve a specific customer by ID.
+  ```bash
+           curl -XPOST -H "Content-type: application/json" -d '{
+         	id: long
+         	firstName: "John",
+         	middleName: "Henry",
+         	lastName: "Doe",
+         	emailAddress: "johDoe@email.com",
+         	phoneNumber: "27550555474" 
+      }' '<minikube-serviceurl>/api/customer'
+ '''
 - `PUT /customer/{id}`: Update a specific customer.
 - `DELETE /customer/{id}`: Delete a specific customer by ID.
 
@@ -94,7 +104,7 @@ Before running this project, ensure you have the following installed:
   
 11. Add GitHub Actions secrets   
    - DOCKERHUB_USERNAME	The username of the Docker Hub user
-   -  DOCKERHUB_TOKEN	The personal token of the Docker Hub user. I show how to generate it in this post
+   - DOCKERHUB_TOKEN	The personal token of the Docker Hub user. I show how to generate it in this post
    - SERVER_HOST	The IP address of the server where your application is running on Docker
    - SERVER_PORT	The server SSH port. It is port 22 by default
    - SERVER_USER	The user to connect to the server with
