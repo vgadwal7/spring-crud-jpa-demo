@@ -56,31 +56,37 @@ Before running this project, ensure you have the following installed:
    mvn clean package
    ```
 3. Run the Application:
-   - java -jar target/<your-app>.jar
-  
-4. Build the Docker Image:
-   - docker build -t spring-rest-crud-api:latest .
-  
-5. Run the Docker Container
-   - docker run -p 8080:8080 spring-rest-crud-api:latest
-  
-6. Start Minikube
-   - minikube start
-  
-7. Build the Docker Image in Minikube's Docker Environment
-   - eval $(minikube docker-env)
+    ```bash
+   java -jar target/<your-app>.jar
+   ```
+5. Build the Docker Image:
+    ```bash
      docker build -t spring-rest-crud-api:latest .
+    ``` 
+7. Run the Docker Container
+    ```bash
+      docker run -p 8080:8080 spring-rest-crud-api:latest
+    ```   
+9. Start Minikube
+   ```bash minikube start ``` 
   
-8. Apply Kubernetes Configurations
-   - kubectl apply -f deployment.yaml
-   - kubectl apply -f service.yaml
+10. Build the Docker Image in Minikube's Docker Environment
+   ```bash 
+     eval $(minikube docker-env)
+     docker build -t spring-rest-crud-api:latest .
+  ```
   
-9. Access the Application
-   - minikube service spring-rest-crud-api --url
+12. Apply Kubernetes Configurations
+   ```bash 
+    kubectl apply -f deployment.yaml
+    kubectl apply -f service.yaml
+   ```
+11. Access the Application
+    ```bash   minikube service spring-rest-crud-api --url  ```
   
-10. Capture the service url and suffix the api's on postman to see the results.
+11. Capture the service url and suffix the api's on postman to see the results.
 
-11. Log on to H2 ui using the service url from 9 suffixed with http://<minikube-service-url>/h2-ui/ to see the results in db.
+12. Log on to H2 ui using the service url from 9 suffixed with http://<minikube-service-url>/h2-ui/ to see the results in db.
      
 ## CI/CD using github actions 
   
