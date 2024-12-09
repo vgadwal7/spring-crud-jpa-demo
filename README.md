@@ -87,17 +87,18 @@ Before running this project, ensure you have the following installed:
 3. Run the Application:
     ```bash
    java -jar target/<your-app>.jar
-   ```
+   
 5. Build the Docker Image:
     ```bash
      docker build -t spring-rest-crud-api:latest .
-    ``` 
+   
 7. Run the Docker Container
     ```bash
       docker run -p 8080:8080 spring-rest-crud-api:latest
-    ```   
+   
 9. Start Minikube
-   ```bash minikube start ``` 
+   ```bash
+   minikube start 
   
 10. Build the Docker Image in Minikube's Docker Environment
    ```bash 
