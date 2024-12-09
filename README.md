@@ -82,7 +82,9 @@ Before running this project, ensure you have the following installed:
     kubectl apply -f service.yaml
    ```
 11. Access the Application
-    ```bash   minikube service spring-rest-crud-api --url  ```
+    ```bash
+    minikube service spring-rest-crud-api --url
+     ```
   
 11. Capture the service url and suffix the api's on postman to see the results.
 
